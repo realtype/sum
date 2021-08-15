@@ -5,4 +5,5 @@ import java.util.List;
 public class ModelDescription {
     String className;
     List<FieldDescription> fieldDescriptions;
+    List<String> interfaces;
 }

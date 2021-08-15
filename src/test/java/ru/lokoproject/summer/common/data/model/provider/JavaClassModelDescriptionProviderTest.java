@@ -9,7 +9,7 @@ class JavaClassModelDescriptionProviderTest {
     JavaClassModelDescriptionProvider modelDescriptionProvider;
 
     @Test
-    void getModelDescription() {
+    void getModelDescription() throws Exception {
         String className = "ru.lokoproject.summer.common.data.model.provider.classes.FirstTestClass";
 
         ModelDescription modelDescription = modelDescriptionProvider.getModelDescription(className);
