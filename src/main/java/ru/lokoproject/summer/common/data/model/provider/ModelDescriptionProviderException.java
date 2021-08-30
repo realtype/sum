@@ -1,6 +1,6 @@
 package ru.lokoproject.summer.common.data.model.provider;
 
-public class ModelDescriptionProviderException extends Exception{
+public class ModelDescriptionProviderException extends RuntimeException{
     public ModelDescriptionProviderException() {
     }
 

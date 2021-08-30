@@ -6,10 +6,5 @@ import java.util.List;
 
 @Getter
 public class GroupQuery extends Query {
-    public enum Type {
-        OR, AND
-    }
-
-    Type type;
     List<Query> childQueries;
 }

@@ -1,11 +1,11 @@
 package ru.lokoproject.summer.common.data.query;
 
+import lombok.Getter;
+
 import java.util.List;
 
+@Getter
 public class SpecificQuery extends Query {
-    public enum Type{
-        EQ, GT, GE, LT, LE, LIKE
-    }
-
+    String path;
     List<String> params;
 }

@@ -1,17 +1,22 @@
 package ru.lokoproject.summer.common.data.model.provider;
 
-
 import org.junit.Test;
 import ru.lokoproject.summer.common.data.model.ModelDescription;
 
-class JavaClassModelDescriptionProviderTest {
+import java.util.Map;
 
-    JavaClassModelDescriptionProvider modelDescriptionProvider;
+import static org.junit.Assert.*;
+
+public class JavaClassModelDescriptionProviderTest {
+
+    JavaClassModelDescriptionProvider modelDescriptionProvider = new JavaClassModelDescriptionProvider();
 
     @Test
-    void getModelDescription() throws Exception {
+    public void getModelDescription() throws ModelDescriptionProviderException {
         String className = "ru.lokoproject.summer.common.data.model.provider.classes.FirstTestClass";
 
-        ModelDescription modelDescription = modelDescriptionProvider.getModelDescription(className);
+        modelDescriptionProvider.setRootProvider(modelDescriptionProvider);
+
+        ModelDescription modelDescription = modelDescriptionProvider.getModelDescription(className, Map.of(ModelDescriptionProvider.MODEL_LEVEL, 1));
     }
 }
